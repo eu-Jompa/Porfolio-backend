@@ -28,7 +28,7 @@ const envioEmail = async ({ nome, email, mensagem }) => {
         </div>
         `
     };
-
+    await transporter.sendMail(mailOptions);
 }
     module.exports = {envioEmail}
 
