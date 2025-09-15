@@ -15,7 +15,7 @@ const envioEmail = async ({ nome, email, mensagem }) => {
     });
 
     const mailOptions ={
-        from: email,
+        from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER,
         subject: `Contato do portfólio - ${nome}`,
         html: `
