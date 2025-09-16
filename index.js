@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const { envioEmail } = require("./Contato"); // note as chaves, porque exportamos { envioEmail }
+const { envioEmail } = require("./contato"); // note as chaves, porque exportamos { envioEmail }
 
 const app = express();
 const PORT = process.env.PORT || 3000;
