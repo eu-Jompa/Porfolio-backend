@@ -1,11 +1,14 @@
 require("dotenv").config();
 const express = require("express");
-const { envioEmail } = require("./contato"); // note as chaves, porque exportamos { envioEmail }
-
+const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use(cors());
 app.use(express.json());
+
+const { envioEmail } = require("./contato"); // note as chaves, porque exportamos { envioEmail }
+
 app.get("/health", (req, res) => res.status(200).send("OK"));
 // Rota teste
 app.get('/', (req, res) => {
