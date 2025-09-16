@@ -17,6 +17,7 @@ const envioEmail = async ({ nome, email, mensagem }) => {
     const mailOptions ={
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER,
+        replyTo: email,
         subject: `Contato do portfólio - ${nome}`,
         html: `
         <div>
@@ -26,7 +27,7 @@ const envioEmail = async ({ nome, email, mensagem }) => {
             <p><strong>Mensagem:</strong></p>
             <p>${mensagem}</p>
         </div>
-        `
+        `,
     };
     await transporter.sendMail(mailOptions);
 }
