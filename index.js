@@ -31,7 +31,7 @@ app.get("/contato", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}`);
+  console.log(`Servidor rodando em porfolio-backend-zeta.vercel.app:${PORT}`);
 });
 
 
