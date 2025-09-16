@@ -20,7 +20,7 @@ const envioEmail = async ({ nome, email, mensagem }) => {
         replyTo: email,
         subject: `Contato do portfólio - ${nome}`,
         html: `
-            <div style="backgroud-color: #242424; border: 1px solid #ffffff; border-radius: 5px;" >
+            <div style="width: 400px; height: 400px; backgroud-color: #242424; border: 1px solid #ffffff; border-radius: 5px;" >
                 <h2>Nova mensagem de contato</h2>
                 <p><strong>Nome:</strong> ${nome}</p>
                 <p><strong>Email:</strong> ${email}</p>
